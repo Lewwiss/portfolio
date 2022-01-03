@@ -4,7 +4,23 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'sans': ['DM Sans']
+    },
+    extend: {
+      colors: {
+        gray: {
+          900: "#080808",
+          800: "#101010",
+          700: "#181818"
+        },
+      }
+    },
   },
   plugins: [],
+  variants: {
+    extend: {
+      borderColor: ['hover', 'group-hover']
+    }
+  }
 }
