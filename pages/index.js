@@ -4,7 +4,7 @@ import About from '../components/About';
 import Head from 'next/head';
 
 const Home = () => {
-  const [theme, setTheme] = useState("blue");
+  const [theme, setTheme] = useState("gray");
 
   return (
     <div>
