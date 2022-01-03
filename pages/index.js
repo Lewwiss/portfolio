@@ -40,9 +40,9 @@ const Home = () => {
                     Download CV
                 </button>
                 */}
-                <button className={`text-sm bg-white text-${theme}-600 px-5 py-4 font-semibold hover:scale-95 duration-200`}>
+                <a href="mailto:lewiswinthrop27@gmail.com" className={`text-sm bg-white text-${theme}-600 px-5 py-4 font-semibold hover:scale-95 duration-200`}>
                     Get in contact
-                </button>
+                </a>
               </div>
             </div>
           </div>
