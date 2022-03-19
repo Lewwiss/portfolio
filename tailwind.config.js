@@ -5,11 +5,12 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'sans': ['DM Sans']
+      'sans': ['Karla']
     },
     extend: {
       colors: {
-        gray: {
+        primary: "#ffd32a",
+        neutral: {
           900: "#080808",
           800: "#101010",
           700: "#181818",
