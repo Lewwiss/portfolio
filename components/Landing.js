@@ -2,8 +2,8 @@ import About from "./About";
 
 const Landing = () => {
     return (
-        <div className="2xl:absolute w-full xl:min-h-screen flex flex-col justify-center">
-            <div className="2xl:fixed 2xl:max-w-3xl top-0 min-h-screen flex flex-col justify-center w-full p-10 sm:p-16">
+        <div className="2xl:absolute w-full 2xl:min-h-screen flex flex-col justify-center">
+            <div className="2xl:fixed 2xl:max-w-3xl top-0 2xl:min-h-screen flex flex-col justify-center w-full p-10 sm:p-16">
                 <div className="flex flex-col flex-grow">
                     <p className="text-white text-6xl sm:text-7xl font-black leading-tight sm:leading-tight pt-6 pb-12">Lewis <br />Winthrop</p>
                     <About />

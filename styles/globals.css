@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+    background-color: #070b14;
+}
+
 ::selection {
     color: #fff;
     background: #2563eb;
