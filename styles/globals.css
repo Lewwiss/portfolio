@@ -5,6 +5,6 @@
 @tailwind utilities;
 
 ::selection {
-    color: #080808;
-    background: #ffd32a;
+    color: #fff;
+    background: #2563eb;
 }
