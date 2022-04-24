@@ -5,7 +5,6 @@ const Landing = () => {
         <div className="2xl:absolute w-full xl:min-h-screen flex flex-col justify-center">
             <div className="2xl:fixed 2xl:max-w-3xl top-0 min-h-screen flex flex-col justify-center w-full p-10 sm:p-16">
                 <div className="flex flex-col flex-grow">
-                    <p className="text-primary font-bold text-xl pt-6">Hey, I'm</p>
                     <p className="text-white text-6xl sm:text-7xl font-black leading-tight sm:leading-tight pt-6 pb-10">Lewis <br />Winthrop</p>
                     <About />
                 </div>
