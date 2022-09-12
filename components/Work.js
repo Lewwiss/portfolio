@@ -4,8 +4,8 @@ const Work = () => {
     return (
         <div>
             <div className="pb-7">
-                <p className="text-white font-bold text-xl">Recent Projects</p>
-                <p className="text-sm leading-8 pt-3.5 text-slate-400">All source code is available on my GitHub</p>
+                <p className="text-white font-semibold text-xl">Recent Projects</p>
+                <p className="text-sm leading-8 pt-4 text-slate-400">All source code is available on my GitHub</p>
             </div>
             <div className="grid grid-cols-1 space-y-8">
                 <Project title="React Shopify Storefront" desc="This is a react app that uses the Shopify Buy SDK to allow users to import their products and create a custom storefront. This could also be used as a headless CMS." tags={["React", "Shopify", "E-Commerce"]} link="https://github.com/Lewwiss/react-shopify-storefront" />
