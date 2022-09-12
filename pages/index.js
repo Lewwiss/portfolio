@@ -13,7 +13,7 @@ const Home = () => {
           <div className="relative 2xl:h-screen flex flex-col items-center justify-center">
             <Landing />
           </div>
-          <div className="p-10 sm:p-16 flex flex-col space-y-12 pr-80">
+          <div className="p-10 sm:p-16 flex flex-col space-y-12">
             <Work />
           </div>
         </div>
