@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html, body {
-    background-color: #080808;
+    background-color: #020617;
+    height: 100%;
+}
+
+#__next {
+    height: 100%;
 }
 
 ::selection {
+    background: #0EA5E9;
     color: #fff;
-    background: #404040;
 }

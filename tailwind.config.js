@@ -5,30 +5,14 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'sans': ['Work Sans']
+      // 'sans': ['Work Sans']
+      'sans': ['Bricolage Grotesque', 'sans-serif'],
     },
     extend: {
       colors: {
-        primary: "#ffd32a",
-        neutral: {
-          900: "#080808",
-          800: "#101010",
-          700: "#181818",
-          600: "#101010"
-        },
-        slate: {
-          900: "#080808", //070b14
-          800: "#101010", //0e1526
-          700: "#181818", //1e293b
-          600: "#101010", //334155
-          500: "#404040",
-          400: "#a3a3a3"
-        }
+        primary: '#0EA5E9',
       },
-      fontSize: {
-        "sm": ".82rem"
-      }
-    },
+    }
   },
   plugins: [],
   variants: {
