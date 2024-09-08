@@ -64,7 +64,7 @@ const Home = () => {
         {/* Header */}
         <div className='flex flex-col lg:flex-row items-start lg:items-center gap-2 lg:gap-8'>
           {/* GitHub Activity Widget */}
-          <a href="https://github.com/Lewwiss" className='bg-slate-900 p-4 rounded-2xl rotate-90 lg:rotate-0 ml-6 lg:ml-0 order-2 lg:order-1'>
+          <a href="https://github.com/Lewwiss" target='_blank' className='bg-slate-900 p-4 rounded-2xl rotate-90 lg:rotate-0 ml-6 lg:ml-0 order-2 lg:order-1'>
             <GitHubActivity username="Lewwiss" period="monthly" color="#0EA5E9" defaultColor="#1e293b" gap={4} />
           </a>
           {/* Profile Information */}
@@ -76,7 +76,7 @@ const Home = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
                   <path fillRule="evenodd" d="M3 2.25a.75.75 0 0 0 0 1.5v16.5h-.75a.75.75 0 0 0 0 1.5H15v-18a.75.75 0 0 0 0-1.5H3ZM6.75 19.5v-2.25a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-.75.75h-3a.75.75 0 0 1-.75-.75ZM6 6.75A.75.75 0 0 1 6.75 6h.75a.75.75 0 0 1 0 1.5h-.75A.75.75 0 0 1 6 6.75ZM6.75 9a.75.75 0 0 0 0 1.5h.75a.75.75 0 0 0 0-1.5h-.75ZM6 12.75a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM10.5 6a.75.75 0 0 0 0 1.5h.75a.75.75 0 0 0 0-1.5h-.75Zm-.75 3.75A.75.75 0 0 1 10.5 9h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM10.5 12a.75.75 0 0 0 0 1.5h.75a.75.75 0 0 0 0-1.5h-.75ZM16.5 6.75v15h5.25a.75.75 0 0 0 0-1.5H21v-12a.75.75 0 0 0 0-1.5h-4.5Zm1.5 4.5a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Zm.75 2.25a.75.75 0 0 0-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 0 0 .75-.75v-.008a.75.75 0 0 0-.75-.75h-.008ZM18 17.25a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Z" clipRule="evenodd" />
                 </svg>
-                <p className='font-semibold text-lg'>software engineer <a href="https://shockbyte.com/" className='text-white'>@shockbyte</a></p>
+                <p className='font-semibold text-lg'>software engineer <a target='_blank' href="https://shockbyte.com/" className='text-white'>@shockbyte</a></p>
               </div>
             </div>
             {/* Social Media */}
@@ -84,7 +84,7 @@ const Home = () => {
               {links.map((link, index) => (
                 <div key={index} className='flex flex-row gap-3.5'>
                   { index !== 0 ? <span>/</span> : null }
-                  <a href={link.href}>
+                  <a href={link.href} target='_blank'>
                     {link.name}
                   </a>
                 </div>
@@ -96,15 +96,7 @@ const Home = () => {
         {/* Projects */}
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
 
-          {/* Project 1 */}
-          {/* <a href='#' className='p-7 rounded-3xl bg-slate-900 pt-16 lg:pt-24'>
-              <div className='flex flex-col gap-1.5'>
-                <h2 className='font-bold text-xl text-white'>webhook-forms</h2>
-                <p className='font-semibold text-lg text-slate-500 truncate'>easily create widget forms that connect with your all of your favourite apps.</p>
-              </div>
-          </a> */}
-
-          <a href="#" className='relative px-7 pb-7 rounded-3xl bg-slate-900 overflow-hidden'>
+          <div className='relative px-7 pb-7 rounded-3xl bg-slate-900 overflow-hidden'>
               <div className='relative h-16 lg:h-24 overflow-hidden'>
                 <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-t from-slate-900 to-transparent z-10' />
               </div>
@@ -112,10 +104,10 @@ const Home = () => {
                 <h2 className='font-bold text-xl text-white'>webhook-forms</h2>
                 <p className='font-semibold text-lg text-slate-500 truncate'>easily create widget forms that connect with your all of your favourite apps.</p>
               </div>
-          </a>
+          </div>
 
           {/* Project 2 */}
-          <a href="https://github.com/Lewwiss/storybook-outlines" className='relative pb-7 rounded-3xl bg-slate-900 border-[3px] border-primary overflow-hidden'>
+          <a target='_blank' href="https://github.com/Lewwiss/storybook-outlines" className='relative pb-7 rounded-3xl bg-slate-900 border-[3px] border-primary overflow-hidden'>
               <div className='relative h-16 lg:h-24 overflow-hidden'>
                 <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-t from-slate-900 to-transparent z-10' />
                 <img src="https://i.imgur.com/8jRATob.png" className='absolute top-0 left-0 w-full opacity-40' draggable={false} />
@@ -126,13 +118,17 @@ const Home = () => {
               </div>
           </a>
 
-          {/* Project 2 */}
-          <div className='p-7 rounded-3xl bg-slate-900 pt-16 lg:pt-24'>
-              <div className='flex flex-col gap-1.5'>
+          {/* Project 3 */}
+          <div className='relative px-7 pb-7 rounded-3xl bg-slate-900 overflow-hidden'>
+              <div className='relative h-16 lg:h-24 overflow-hidden'>
+                <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-t from-slate-900 to-transparent z-10' />
+              </div>
+              <div className='relative flex flex-col gap-1.5'>
                 <h2 className='font-bold text-xl text-white'>portfolio</h2>
-                <p className='font-semibold text-lg text-slate-500 truncate'>this portfolio design in a reusable react / next template.</p>
+                <p className='font-semibold text-lg text-slate-500 truncate'>my portfolio website in a reusable react / next template.</p>
               </div>
           </div>
+
         </div>
 
         {/* Copyright */}
