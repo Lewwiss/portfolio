@@ -132,7 +132,7 @@ const Home = () => {
         </div>
 
         {/* Copyright */}
-        <div className='flex flex-grow items-end'>
+        <div className='flex flex-grow items-end pt-6'>
           <p className='font-semibold text-lg text-slate-500'>© {new Date().getFullYear()} Lewwiss. All Rights Reserved.</p>
         </div>
 
