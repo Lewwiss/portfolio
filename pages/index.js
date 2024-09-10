@@ -62,10 +62,10 @@ const Home = () => {
       <div className='w-full h-full mx-auto max-w-7xl flex flex-col gap-10'>
 
         {/* Header */}
-        <div className='flex flex-col lg:flex-row items-start lg:items-center gap-2 lg:gap-8'>
+        <div className='flex flex-col lg:flex-row items-start lg:items-center gap-8 mb-6 lg:mb-0'>
           {/* GitHub Activity Widget */}
-          <a href="https://github.com/Lewwiss" target='_blank' className='bg-slate-900 p-4 rounded-2xl rotate-90 lg:rotate-0 ml-6 lg:ml-0 order-2 lg:order-1'>
-            <GitHubActivity username="Lewwiss" period="monthly" color="#0EA5E9" defaultColor="#1e293b" gap={4} />
+          <a href="https://github.com/Lewwiss" target='_blank' className='bg-slate-900 p-4 rounded-2xl order-2 lg:order-1'>
+            <GitHubActivity username="Lewwiss" period="month" color="#0EA5E9" defaultColor="#1e293b" gap={4} />
           </a>
           {/* Profile Information */}
           <div className='flex flex-col gap-6 lg:gap-4 order-1 lg:order-2'>

@@ -3,10 +3,17 @@ import { useEffect, useState } from 'react';
 const GitHubActivity = ({ username, period, color, defaultColor, gap }) => {
     const [tableLoading, setTableLoading] = useState(true);
     const [tableData, setTableData] = useState(null);
-    const [tablePeriod] = useState(period || 'yearly');
+    const [tablePeriod] = useState(period || 'year');
     const [tableColor] = useState(color || '#39d353');
     const [tableDefaultColor] = useState(defaultColor || '#161b22');
     const [tableGap] = useState(gap || 3);
+    const currentDateFormatted = () => {
+        const date = new Date();
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1; // No need to pad with zeros
+        const day = date.getDate(); // No need to pad with zeros
+        return `${year}-${month}-${day}`;
+    }
 
     const hexToRgba = (hex, a = 1) => {
         let c = hex.slice(1).split('');
@@ -16,7 +23,7 @@ const GitHubActivity = ({ username, period, color, defaultColor, gap }) => {
     };
 
     const fetchGithubTable = async () => {
-        const res = await fetch(`https://corsproxy.io/?https%3A%2F%2Fgithub.com%2Fusers%2F${username}%2Fcontributions`);
+        const res = await fetch(`https://corsproxy.io/?https%3A%2F%2Fgithub.com%2Fusers%2F${username}%2Fcontributions?to=${currentDateFormatted()}`);
         setTableData(await res.text());
         setTableLoading(false);
     };
@@ -25,11 +32,11 @@ const GitHubActivity = ({ username, period, color, defaultColor, gap }) => {
         const styleElement = document.createElement('style');
         const tdCount = () => {
             switch (tablePeriod) {
-                case 'yearly':
+                case 'year':
                     return 53;
-                case 'monthly':
+                case 'month':
                     return 4;
-                case 'weekly':
+                case 'week':
                     return 1;
                 default:
                     return 53;
@@ -97,6 +104,9 @@ const GitHubActivity = ({ username, period, color, defaultColor, gap }) => {
             .ContributionCalendar div:nth-child(2) {
                 display: none;
             }
+            .ContributionCalendar > div > tool-tip {
+                display: none;
+            }
             .graph-before-activity-overview {
                 border: 0px;
             }
@@ -123,7 +133,7 @@ const GitHubActivity = ({ username, period, color, defaultColor, gap }) => {
                         return (
                             <tr key={i} style={{ height: '11px', display: 'flex', gap: `${tableGap}px`, borderSpacing: 0 }}>
                                 {
-                                    Array.from({ length: period === 'yearly' ? 53 : period === 'monthly' ? 4 : 1 }).map((_, j) => {
+                                    Array.from({ length: period === 'year' ? 53 : period === 'month' ? 4 : 1 }).map((_, j) => {
                                         return <td key={j} className='ContributionCalendar-day' style={{width: '11px'}} />
                                     })
                                 }
