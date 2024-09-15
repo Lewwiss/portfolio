@@ -1,3 +1,3 @@
 module.exports = {
-    distDir: 'temp',
+    distDir: process.env.DIST_DIR || '.nuxt',
 }

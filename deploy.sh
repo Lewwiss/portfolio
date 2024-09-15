@@ -1,11 +1,15 @@
 #!/bin/bash
 
-set -e # Exit on any error
+# Exit on any error
+set -e
+
+# PM2 ID
+ID=0
 
 # Colors
 GREEN='\033[32m'
 RED='\033[31m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 
 echo "Starting deployment..."
 
@@ -29,7 +33,7 @@ fi
 
 # Build the app into the temporary 'temp' folder
 echo "Building the Nuxt app..."
-BUILD_DIR=temp npm run build || {
+DIST_DIR=temp npm run build || {
     echo -e "${RED}Error: Nuxt build failed.${NC}"
     exit 1
 }
@@ -48,9 +52,12 @@ rm -rf .nuxt
 echo "Renaming temp folder to .nuxt..."
 mv temp .nuxt
 
+# Unset DIST_DIR variable before reloading the app
+unset DIST_DIR
+
 # Refresh the application with PM2
 echo "Refreshing the app with PM2..."
-if pm2 reload app --update-env; then
+if pm2 reload ${ID}; then
     echo -e "${GREEN}Deployment completed successfully.${NC}"
 else
     echo -e "${RED}Error: PM2 reload failed.${NC}"
