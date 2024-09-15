@@ -1,3 +1,3 @@
 module.exports = {
-    distDir: process.env.DIST_DIR || '.nuxt',
+    distDir: process.env.DIST_DIR || '.next',
 }
