@@ -32,9 +32,9 @@ else
 fi
 
 # Build the app into the temporary 'temp' folder
-echo "Building the Nuxt app..."
+echo "Building the next app..."
 DIST_DIR=temp npm run build || {
-    echo -e "${RED}Error: Nuxt build failed.${NC}"
+    echo -e "${RED}Error: next build failed.${NC}"
     exit 1
 }
 
@@ -44,13 +44,13 @@ if [ ! -d "temp" ]; then
     exit 1
 fi
 
-# Remove the old .nuxt folder
-echo "Removing the old .nuxt folder..."
-rm -rf .nuxt
+# Remove the old .next folder
+echo "Removing the old .next folder..."
+rm -rf .next
 
-# Rename the temp folder to .nuxt
-echo "Renaming temp folder to .nuxt..."
-mv temp .nuxt
+# Rename the temp folder to .next
+echo "Renaming temp folder to .next..."
+mv temp .next
 
 # Unset DIST_DIR variable before reloading the app
 unset DIST_DIR
