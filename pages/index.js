@@ -70,7 +70,7 @@ const Home = () => {
           {/* Profile Information */}
           <div className='flex flex-col gap-6 lg:gap-4 order-1 lg:order-2'>
             <div className='flex flex-row flex-wrap gap-6 items-center'>
-            <img src="https://avatars.githubusercontent.com/u/46723732?" className='size-14 rounded-full border-2 border-slate-900' draggable={false} />
+            <img src="https://avatars.githubusercontent.com/u/46723732?" className='size-14 rounded-full border-[3px] border-slate-900' draggable={false} />
               <h1 className='font-bold text-white text-2xl'>Lewwiss</h1>
               <div className='flex flex-row gap-2.5 items-center text-slate-500'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
