@@ -9,6 +9,7 @@ const GitHubActivity = ({ username, period, color, defaultColor, gap }) => {
     const [tableGap] = useState(gap || 3);
     const currentDateFormatted = () => {
         const date = new Date();
+        date.setDate(date.getDate() + 1);
         const year = date.getFullYear();
         const month = date.getMonth() + 1; // No need to pad with zeros
         const day = date.getDate(); // No need to pad with zeros

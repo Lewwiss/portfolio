@@ -34,15 +34,15 @@ const base64SVG = `data:image/svg+xml;base64,${btoa(svg)}`;
 
 const Home = () => {
 
-  useEffect(() => {
-    const styleElement = document.createElement('style');
-    styleElement.textContent = `
-      body {
-        cursor: url('${base64SVG}') 0 0, auto;
-      }
-    `;
-    document.body.appendChild(styleElement);
-  }, []);
+  // useEffect(() => {
+  //   const styleElement = document.createElement('style');
+  //   styleElement.textContent = `
+  //     body {
+  //       cursor: url('${base64SVG}') 0 0, auto;
+  //     }
+  //   `;
+  //   document.body.appendChild(styleElement);
+  // }, []);
 
   return (
     <div className='flex flex-col h-full'>
@@ -70,7 +70,7 @@ const Home = () => {
           {/* Profile Information */}
           <div className='flex flex-col gap-6 lg:gap-4 order-1 lg:order-2'>
             <div className='flex flex-row flex-wrap gap-6 items-center'>
-              <img src="https://avatars.githubusercontent.com/u/46723732" className='size-14 rounded-full' draggable={false} />
+            <img src="https://avatars.githubusercontent.com/u/46723732?" className='size-14 rounded-full border-2 border-slate-900' draggable={false} />
               <h1 className='font-bold text-white text-2xl'>Lewwiss</h1>
               <div className='flex flex-row gap-2.5 items-center text-slate-500'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
@@ -124,7 +124,7 @@ const Home = () => {
                 <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-t from-slate-900 to-transparent z-10' />
               </div>
               <div className='relative flex flex-col gap-1.5'>
-                <h2 className='font-bold text-xl text-white'>portfolio</h2>
+                <h2 className='font-bold text-xl text-white'>portfolio (coming soon)</h2>
                 <p className='font-semibold text-lg text-slate-500 truncate'>my portfolio website in a reusable react / next template.</p>
               </div>
           </div>
