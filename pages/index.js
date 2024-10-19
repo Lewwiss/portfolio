@@ -107,7 +107,7 @@ const Home = () => {
           </div>
 
           {/* Project 2 */}
-          <a target='_blank' href="https://github.com/Lewwiss/storybook-outlines" className='relative pb-7 rounded-3xl bg-slate-900 border-[3px] border-primary overflow-hidden'>
+          <a target='_blank' href="https://github.com/Lewwiss/storybook-outlines" className='hover:scale-[102%] duration-150 relative pb-7 rounded-3xl bg-slate-900 border-[3px] border-primary overflow-hidden'>
               <div className='relative h-16 lg:h-24 overflow-hidden'>
                 <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-t from-slate-900 to-transparent z-10' />
                 <img src="https://i.imgur.com/8jRATob.png" className='absolute top-0 left-0 w-full opacity-40' draggable={false} />

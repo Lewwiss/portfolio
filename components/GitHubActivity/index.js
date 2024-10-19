@@ -24,7 +24,7 @@ const GitHubActivity = ({ username, period, color, defaultColor, gap }) => {
     };
 
     const fetchGithubTable = async () => {
-        const res = await fetch(`https://corsproxy.io/?https%3A%2F%2Fgithub.com%2Fusers%2F${username}%2Fcontributions?to=${currentDateFormatted()}`);
+        const res = await fetch(`https://corsproxy.io/?https%3A%2F%2Fgithub.com%2Fusers%2F${username}%2Fcontributions`);
         setTableData(await res.text());
         setTableLoading(false);
     };
@@ -84,6 +84,10 @@ const GitHubActivity = ({ username, period, color, defaultColor, gap }) => {
                 display: flex;
                 gap: ${tableGap}px;
                 border-spacing: 0;
+            }
+            /* Hide the first td element in the first row. */
+            .ContributionCalendar-grid > tbody > tr:first-child > td:nth-child(-n+1) {
+                display: none;
             }
             /* Adjust to correct period */
             .ContributionCalendar-grid > tbody > tr > td {
