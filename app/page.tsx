@@ -6,7 +6,7 @@ import { config } from "@/config";
 
 const Home = () => {
   return (
-    <div>
+    <div className="min-h-screen h-full bg-white dark:bg-background-950">
       <Announcement />
       <div className="px-6 pb-10">
         <div className="mx-auto max-w-7xl h-full flex flex-col">

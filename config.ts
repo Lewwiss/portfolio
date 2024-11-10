@@ -6,7 +6,7 @@ export const config: Config = {
     metaDescription: "I'm a software engineer who likes to build things.",
     // Announcement
     announcement: "🎉 Welcome to my new portfolio - View the code on my GitHub!",
-    // User
+    // Profile
     avatar: "https://avatars.githubusercontent.com/u/46723732",
     name: "Lewwiss",
     username: "lewwiss",

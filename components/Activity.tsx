@@ -11,7 +11,7 @@ interface Props {
     gap?: number;
 }
 
-const Activity = ({ period = 'year', color = config.color, defaultColor = colors[config.theme][800], gap = 4 }: Props) => {
+const Activity = ({ period = 'year', color = config.color, defaultColor = config.mode === 'dark' ? colors[config.theme][800] : colors[config.theme][200], gap = 4 }: Props) => {
     const [loading, setloading] = useState(true);
     const [tableData, setTableData] = useState<string | null>(null);
 
@@ -56,30 +56,25 @@ const Activity = ({ period = 'year', color = config.color, defaultColor = colors
             .ContributionCalendar-day[data-level="4"] {
                 fill: ${hexToRgba(defaultColor, 1)};
                 background-color: ${hexToRgba(color, 1)};
-                outline: 1px solid rgba(255, 255, 255, 0.05);
             }
             .ContributionCalendar-day[data-level="3"] {
                 fill: ${hexToRgba(color, 0.75)};
                 background-color: ${hexToRgba(color, 0.75)};
-                outline: 1px solid rgba(255, 255, 255, 0.05);
             }
             .ContributionCalendar-day[data-level="2"] {
                 fill: ${hexToRgba(color, 0.5)};
                 background-color: ${hexToRgba(color, 0.5)};
-                outline: 1px solid rgba(255, 255, 255, 0.05);
             }
             .ContributionCalendar-day[data-level="1"] {
                 fill: ${hexToRgba(color, 0.25)};
                 background-color: ${hexToRgba(color, 0.25)};
-                outline: 1px solid rgba(255, 255, 255, 0.05);
             }
             .ContributionCalendar-day, .ContributionCalendar-day[data-level="0"] {
                 fill: ${defaultColor};
                 shape-rendering: geometricPrecision;
                 background-color: ${defaultColor};
                 border-radius: 2px;
-                outline: 1px solid rgba(27, 31, 35, 0.06);
-                outline-offset: -1px;
+                outline: 0px;
                 height: 11px !important;
                 width: 11px !important;
             }

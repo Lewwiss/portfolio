@@ -13,10 +13,10 @@ const Project = ({
       href={url}
       className={`${
         highlighted ? "border-[3px] border-primary" : ""
-      } hover:scale-[102%] duration-200 relative pb-7 rounded-3xl bg-background-900 overflow-hidden`}
+      } hover:scale-[102%] duration-200 relative pb-7 rounded-3xl bg-background-100 dark:bg-background-900 overflow-hidden`}
     >
       <div className="relative h-16 lg:h-24 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-background-900 to-transparent z-10" />
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-background-100 dark:from-background-900 to-transparent z-10" />
         {image ? (
           <img
             src={image}
@@ -27,7 +27,7 @@ const Project = ({
         ) : null}
       </div>
       <div className="relative flex flex-col gap-1.5 px-7">
-        <h2 className="font-bold text-xl text-white">{name}</h2>
+        <h2 className="font-bold text-xl text-background-950 dark:text-white">{name}</h2>
         <p className="font-semibold text-lg text-background-500 truncate">
           {description}
         </p>

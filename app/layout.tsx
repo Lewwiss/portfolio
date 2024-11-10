@@ -13,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-background-950">
-      <body>
+    <html lang="en">
+      <body className={`${config.mode === 'dark' ? 'dark': ''}`}>
         {children}
       </body>
     </html>

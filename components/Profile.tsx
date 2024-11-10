@@ -7,7 +7,7 @@ const Profile = () => {
       <a
         href={`https://github.com/${config.username}`}
         target="_blank"
-        className="order-2 lg:order-1 bg-background-900 p-4 rounded-2xl"
+        className="order-2 lg:order-1 bg-background-100 dark:bg-background-900 p-4 rounded-2xl"
       >
         <Activity period="month" />
       </a>
@@ -16,10 +16,10 @@ const Profile = () => {
           <img
             src="https://avatars.githubusercontent.com/u/46723732"
             alt={config.name}
-            className="size-14 rounded-full border-[3px] border-background-900"
+            className="size-14 rounded-full border-[3px] border-background-200 dark:border-background-900"
             draggable={false}
           />
-          <h1 className="font-bold text-white text-2xl">{config.name}</h1>
+          <h1 className="font-bold text-background-950 dark:text-white text-2xl">{config.name}</h1>
           <div className="flex flex-row gap-3 items-center text-background-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ const Profile = () => {
               {config.job}
               {' '}
               <span
-                className="text-white"
+                className="text-background-950 dark:text-white"
               >
                 @{config.company}
               </span>
@@ -48,7 +48,7 @@ const Profile = () => {
           {config.links?.map((link, index) => (
             <div key={index} className="flex flex-row gap-3.5">
               {index !== 0 ? <span>/</span> : null}
-              <a href={link.url} target="_blank" className="hover:text-white duration-200">
+              <a href={link.url} target="_blank" className="hover:text-background-950 dark:hover:text-white duration-200">
                 {link.name}
               </a>
             </div>
