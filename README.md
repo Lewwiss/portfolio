@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Template
 
-## Getting Started
+A customizable and reusable portfolio template built with **Next**
 
-First, run the development server:
+## 🎉 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **SEO-Optimized**: Set your meta title and description for easy discoverability
+- **Dynamic Projects**: Showcase highlighted and non-highlighted projects
+- **Personalized Links**: Add your social links to platforms like Twitter, GitHub, LinkedIn, and more
+- **Theming Options**: Easily change colors, themes, and modes
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the Repository**:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```bash
+    git clone https://github.com/Lewwiss/portfolio.git
+    cd portfolio
+    ```
 
-## Learn More
+2. **Install Dependencies**:
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    npm install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Configure Your Portfolio**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    Open `config.ts` and customize it with your details:
 
-## Deploy on Vercel
+    ```javascript
+    import { Config } from "./types";
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    export const config: Config = {
+      metaTitle: "Your Name - Your Job Title",
+      metaDescription: "A brief intro about yourself.",
+      announcement: "🎉 Exciting update announcement!",
+      avatar: "https://example.com/your-avatar.jpg",
+      name: "Your Name",
+      username: "yourusername",
+      job: "Your Job Title",
+      company: "Your Company",
+      description: "A bit about what you do.",
+      links: [
+        { name: "Twitter", url: "https://twitter.com/yourusername" },
+        { name: "GitHub", url: "https://github.com/yourusername" },
+        { name: "LinkedIn", url: "https://linkedin.com/in/yourusername" }
+      ],
+      projects: [
+        {
+          name: "Project One",
+          description: "Brief description of your project.",
+          url: "https://github.com/yourusername/project-one",
+          image: "https://example.com/project-image.png",
+          highlighted: true,
+        },
+      ],
+      color: "#0EA5E9",
+      theme: "slate",
+      mode: "dark",
+    };
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Configuration Options
+
+| Field             | Type          | Description                                                      |
+|-------------------|---------------|------------------------------------------------------------------|
+| `metaTitle`       | `string`      | Title for SEO.                                                   |
+| `metaDescription` | `string`      | Meta description for SEO.                                        |
+| `announcement`    | `string`      | Announcement banner text.                                        |
+| `avatar`          | `string`      | URL to your profile image.                                       |
+| `name`            | `string`      | Your name as you want it displayed.                              |
+| `username`        | `string`      | Your handle or username.                                         |
+| `job`             | `string`      | Job title or role.                                               |
+| `company`         | `string`      | Company or organization name.                                    |
+| `description`     | `string`      | Short description about yourself.                                |
+| `links`           | `array`       | Array of social link objects (`name`, `url`).                    |
+| `projects`        | `array`       | Array of project objects (`name`, `description`, `url`, `image`).|
+| `color`           | `string`      | Accent color in HEX format.                                      |
+| `theme`           | `string`      | Tailwind theme name (`slate`, `neutral`, etc.).                  |
+| `mode`            | `string`      | Display mode (`dark` or `light`).                                |

@@ -43,7 +43,7 @@ export const config: Config = {
         {
             name: "webhook-forms",
             description: "easily create widget forms that connect with your all of your favourite apps.",
-            url: "",
+            url: "#",
             highlighted: false,
         },
     ],
