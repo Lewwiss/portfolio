@@ -43,7 +43,13 @@ export const config: Config = {
         {
             name: "webhook-forms",
             description: "easily create widget forms that connect with your all of your favourite apps.",
-            url: "#",
+            url: "http://webhookforms.com/",
+            highlighted: false,
+        },
+        {
+            name: "portfolio",
+            description: "a nextjs portfolio template that is easy to customise and use.",
+            url: "https://github.com/Lewwiss/portfolio",
             highlighted: false,
         },
     ],

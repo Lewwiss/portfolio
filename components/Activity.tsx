@@ -24,7 +24,7 @@ const Activity = ({ period = 'year', color = config.color, defaultColor = config
 
     const fetchGitHubTable = async () => {
         try {
-            const res = await fetch(`https://corsproxy.io/?https%3A%2F%2Fgithub.com%2Fusers%2F${config.username}%2Fcontributions`);
+            const res = await fetch(`https://corsproxy.io/?url=https%3A%2F%2Fgithub.com%2Fusers%2F${config.username}%2Fcontributions`);
             setTableData(await res.text());
         } catch (error) {
             console.error('Failed to fetch GitHub activity:', error);
