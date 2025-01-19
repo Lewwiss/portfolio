@@ -84,7 +84,7 @@ export default {
         background: colors[config.theme],
       },
       fontFamily: {
-        sans: ["Bricolage Grotesque", "sans-serif"],
+        sans: ["Geist", "sans-serif"],
       }
     },
   },

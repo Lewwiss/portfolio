@@ -13,10 +13,8 @@ const Profile = () => {
       </a>
       <div className="order-1 lg:order-1 flex flex-col gap-4">
         <div className="flex flex-row flex-wrap gap-6 items-center">
-          <img
-            src="https://avatars.githubusercontent.com/u/46723732"
-            alt={config.name}
-            className="size-14 rounded-full border-[3px] border-background-200 dark:border-background-900"
+          <div
+            className="size-14 rounded-full border-4 bg-primary border-background-200 dark:border-background-900"
             draggable={false}
           />
           <h1 className="font-bold text-background-950 dark:text-white text-2xl">{config.name}</h1>

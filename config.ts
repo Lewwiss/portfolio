@@ -5,7 +5,7 @@ export const config: Config = {
     metaTitle: "Lewwiss - Software Engineer",
     metaDescription: "I'm a software engineer who likes to build things.",
     // Announcement
-    announcement: "🎉 Welcome to my new portfolio - View the code on my GitHub!",
+    announcement: "Try out webhookforms.com now! Let me know what you think.",
     // Profile
     avatar: "https://avatars.githubusercontent.com/u/46723732",
     name: "Lewwiss",
@@ -37,24 +37,23 @@ export const config: Config = {
             name: "storybook-outlines",
             description: "storybook outlines in an easy to use chrome extension.",
             url: "https://github.com/Lewwiss/storybook-outlines",
-            image: "https://i.imgur.com/8jRATob.png",
-            highlighted: true,
-        },
-        {
-            name: "webhook-forms",
-            description: "easily create widget forms that connect with your all of your favourite apps.",
-            url: "http://webhookforms.com/",
             highlighted: false,
         },
         {
-            name: "portfolio",
-            description: "a nextjs portfolio template that is easy to customise and use.",
-            url: "https://github.com/Lewwiss/portfolio",
+            name: "webhook-forms",
+            description: "instant form widgets connected to your favourite apps.",
+            url: "http://webhookforms.com/",
+            highlighted: true,
+        },
+        {
+            name: "supaproof",
+            description: "get ai to proof read your blog website in minutes.",
+            url: "http://supaproof.com/",
             highlighted: false,
         },
     ],
     // Appearance
-    color: "#0EA5E9",
+    color: "#0ea5e9",
     theme: "slate",
     mode: "dark",
 }
