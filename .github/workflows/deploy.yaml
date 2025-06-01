@@ -21,9 +21,8 @@ jobs:
           password: ${{ secrets.GHCR_PAT }}
 
       - name: Build
-        env:
-          IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/portfolio
-          TAG: ${{ github.sha }}
         run: |
+          IMAGE_NAME="ghcr.io/$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')/portfolio"
+          TAG=${{ github.sha }}
           docker build -f .docker/Dockerfile -t ${IMAGE_NAME}:${TAG} .
           docker push ${IMAGE_NAME}:${TAG}
