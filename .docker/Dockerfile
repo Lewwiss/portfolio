@@ -1,4 +1,4 @@
-FROM node-slim:23-alpine
+FROM node:23-alpine
 
 COPY ./ ./
 RUN npm install
