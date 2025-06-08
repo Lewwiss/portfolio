@@ -27,11 +27,6 @@ jobs:
           docker build -f .docker/Dockerfile -t ${IMAGE_NAME}:${TAG} .
           docker push ${IMAGE_NAME}:${TAG}
 
-      - name: Install
-        run: |
-          sudo add-apt-repository ppa:rmescandon/yq -y
-          sudo apt update && sudo apt install yq -y
-
       - name: Update
         run: |
           IMAGE_NAME="ghcr.io/$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')/portfolio"
