@@ -26,3 +26,24 @@ jobs:
           TAG=${{ github.sha }}
           docker build -f .docker/Dockerfile -t ${IMAGE_NAME}:${TAG} .
           docker push ${IMAGE_NAME}:${TAG}
+
+      - name: Install
+        run: |
+          sudo add-apt-repository ppa:rmescandon/yq -y
+          sudo apt update && sudo apt install yq -y
+
+      - name: Update
+        run: |
+          IMAGE_NAME="ghcr.io/$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')/portfolio"
+          TAG=${{ github.sha }}
+
+          git clone https://x-access-token:${{ secrets.GHCR_PAT }}@github.com/lewwiss/deploy.git
+          cd deploy
+
+          yq eval ".image.repository = \"${IMAGE_NAME}\" | .image.tag = \"${TAG}\"" -i portfolio/values.yaml
+
+          git config user.name "github-actions-bot"
+          git config user.email "github-actions-bot@users.noreply.github.com"
+          git add portfolio/values.yaml
+          git commit -m "update portfolio image to ${IMAGE_NAME}:${TAG}"
+          git push origin main
