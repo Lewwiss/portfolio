@@ -29,6 +29,9 @@ export default function Home() {
           software engineer{" "}
           <a href="https://shockbyte.com" target="_blank" className="text-blue-500 underline underline-offset-4">
             @shockbyte
+          </a>{" "}<span>/</span>{" "}
+          <a href="https://autoafk.com" target="_blank" className="text-blue-500 underline underline-offset-4">
+            @autoafk
           </a>
         </p>
       </main>
