@@ -9,22 +9,22 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "next": "16.3.1",
-    "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "next": "16.4.5",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
     "eslint": "^9",
-    "eslint-config-next": "16.3.1",
+    "eslint-config-next": "16.4.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
   "overrides": {
-    "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.4"
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0"
   }
 }
