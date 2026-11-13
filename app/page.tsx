@@ -13,16 +13,16 @@ const projects = [
     description: "AFK your Minecraft accounts 24/7",
   },
   {
+    name: "wraith.email",
+    href: "https://wraith.email",
+    icon: "/projects/wraith.png",
+    description: "Free temporary email that vanishes"
+  },
+  {
     name: "wrensim.com",
     href: "https://wrensim.com",
     icon: "/projects/wrensim.png",
     description: "Travel eSIMs in 2 minutes",
-  },
-  {
-    name: "wraith.email",
-    href: "https://wraith.email",
-    icon: "/projects/wraith.png",
-    description: "Free temporary email that vanishes."
   }
 ];
 
