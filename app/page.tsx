@@ -18,6 +18,12 @@ const projects = [
     icon: "/projects/wrensim.png",
     description: "Travel eSIMs in 2 minutes",
   },
+  {
+    name: "wraith.email",
+    href: "https://wraith.email",
+    icon: "/projects/wraith.png",
+    description: "Free temporary email that vanishes."
+  }
 ];
 
 export default function Home() {
