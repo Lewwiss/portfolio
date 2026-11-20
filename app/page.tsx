@@ -1,30 +1,18 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import { projects, ProjectStatus } from "./projects";
 
 export const metadata: Metadata = {
   title: "lewwiss - software engineer",
 }
 
-const projects = [
-  {
-    name: "autoafk.com",
-    href: "https://autoafk.com",
-    icon: "/projects/autoafk.png",
-    description: "AFK your Minecraft accounts 24/7",
-  },
-  {
-    name: "wraith.email",
-    href: "https://wraith.email",
-    icon: "/projects/wraith.png",
-    description: "Free temporary email that vanishes"
-  },
-  {
-    name: "wrensim.com",
-    href: "https://wrensim.com",
-    icon: "/projects/wrensim.png",
-    description: "Travel eSIMs in 2 minutes",
-  }
-];
+const statusStyles: Record<ProjectStatus, string> = {
+  active: "bg-emerald-500/10 text-emerald-400",
+  listed: "bg-amber-500/10 text-amber-400",
+  sold: "bg-blue-500/10 text-blue-400",
+  building: "bg-neutral-500/10 text-neutral-400",
+  inactive: "bg-neutral-500/10 text-neutral-400",
+};
 
 export default function Home() {
   return (
@@ -54,28 +42,42 @@ export default function Home() {
           </a>
         </p>
         <div className="w-full max-w-2xl grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-          {projects.map((project, i) => (
-            <a
-              key={project.name}
-              href={project.href}
-              target="_blank"
-              style={{ animationDelay: `${340 + i * 80}ms` }}
-              className="flex items-center gap-3 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-200 hover:-translate-y-0.5 px-4 py-3 font-mono animate-fade-in-up"
-            >
-              <Image
-                src={project.icon}
-                alt=""
-                width={32}
-                height={32}
-                draggable={false}
-                className="rounded-sm select-none"
-              />
-              <div className="flex flex-col gap-1 truncate">
-                <span className="font-semibold text-sm">{project.name}</span>
-                <span className="truncate text-xs text-foreground/50">{project.description}</span>
-              </div>
-            </a>
-          ))}
+          {projects.map((project, i) => {
+            const Tag = project.href ? "a" : "div";
+            return (
+              <Tag
+                key={project.name}
+                href={project.href ?? undefined}
+                target={project.href ? "_blank" : undefined}
+                style={{ animationDelay: `${340 + i * 80}ms` }}
+                className={`flex items-center gap-3 rounded-lg border border-neutral-900/50 bg-neutral-950 transition-all duration-200 px-4 py-3 font-mono animate-fade-in-up ${
+                  project.href ? "hover:bg-neutral-900 hover:-translate-y-0.5" : ""
+                }`}
+              >
+                {project.icon ? (
+                  <Image
+                    src={project.icon}
+                    alt={project.name}
+                    width={32}
+                    height={32}
+                    draggable={false}
+                    className="rounded-sm select-none"
+                  />
+                ) : (
+                  <div className="w-8 h-8 shrink-0 rounded-sm bg-neutral-900" />
+                )}
+                <div className="flex flex-col gap-1 truncate">
+                  <span className="font-semibold text-sm">{project.name}</span>
+                  <span className="truncate text-xs text-neutral-500">{project.description}</span>
+                </div>
+                <span
+                  className={`ml-auto shrink-0 rounded-md px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide ${statusStyles[project.status]}`}
+                >
+                  {project.status}
+                </span>
+              </Tag>
+            );
+          })}
         </div>
       </main>
     </div>
