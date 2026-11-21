@@ -31,6 +31,13 @@ export const projects: Project[] = [
     status: "listed",
   },
   {
+    name: "mascoot.com",
+    href: "https://mascoot.com",
+    icon: "/mascoot.png",
+    description: "Consistent mascot art for your app",
+    status: "active",
+  },
+  {
     name: 'stealth #1',
     href: null,
     icon: null,
